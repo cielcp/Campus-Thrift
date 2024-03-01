@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
+/* Correctly and properly define at least ten of your own CSS rules */
+
+/* TEXT */
+
+/*
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 
+
+.raleway-thrift {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} 
+*/
+
+.navbar-brand {
+    font-size: x-large;
+    font-family:"Raleway", sans-serif;
+}
+
+h1 {
+    font-size: x-large;
+    font-family:"Raleway", sans-serif;
+}
+
+h2 {
+    font-size: larger;
+    font-family:"Raleway", sans-serif;
+}
+
+h3 {
+    font-size: large;
+    font-family: "Inter", sans-serif;
+}
+
+p {
+    font-size: small;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:#040402;
+}
+
+/* COMPONENTS */
+
+button {
+    font-family: "Raleway", sans-serif;
+    font-size: large;
+    border-radius: 50px;
+    border-width: 1.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F8F5F0;
+} 
+button a {
+    color: #040402; /* Default color */
+}
+
+/* At least 3 of your ten CSS rules properly update the style or layout of your screens 
+when specific events occur. */
+button:hover {
+    background-color: #040402;
+}
+button:hover a {
+    color: #F8F5F0;
+}
+
+
+.line {
+    height: 1px;
+    background-color: #040402;
+}
+
+.search-bar {
+    border-radius: 50px;
+    border-color:#040402;
+    border-width: 1.5px;
+}
+
+.icon-container {
+    margin-left: 10px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+}
+
+.listing {
+    flex: 0 0 auto;
+    border-style: solid;
+    border-width: 1.5px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+} 
+
+.listing-img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+} img {
+    width: 100%;
+    
+}
+
+
+/* doesnt work right now but might need in the future */
+.bottom-line {
+    border-bottom: #040402;
+    border-style: solid;
+}
+.item:last-child {
+    margin-right: 0;
+}
+
+/* Support responsive design / layout - the user demonstration 
+should utilize the responsive design mode of the browser to showcase */
+@media screen and (max-width: 768px) {
+
+    .listing {
+        flex: 1 0 auto;
+        max-width: 200px;
+    }
+    .listing-img-container {
+        height:200px;
+    }
+}

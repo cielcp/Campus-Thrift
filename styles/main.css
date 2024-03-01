@@ -70,9 +70,12 @@ button:hover a {
     color: #F8F5F0;
 }
 
-
 .line {
     height: 1px;
+    background-color: #040402;
+}
+.vert-line {
+    width: 1px;
     background-color: #040402;
 }
 
@@ -113,6 +116,19 @@ button:hover a {
     
 }
 
+/* MESSAGES */
+.chat-log {
+    width: 30%;
+}
+.chat-profile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+.chat-container {
+    width:80%;
+    padding: 40px;
+}
 
 /* doesnt work right now but might need in the future */
 .bottom-line {

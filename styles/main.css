@@ -130,6 +130,32 @@ button:hover a {
     padding: 40px;
 }
 
+/* PROFILE */
+.profile-pic-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #040402;
+    overflow: hidden;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    padding-left: 20px;
+}
+
+.listing-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
 /* doesnt work right now but might need in the future */
 .bottom-line {
     border-bottom: #040402;

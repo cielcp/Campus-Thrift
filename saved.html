@@ -4,170 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <style>
-        .profile-container, .listings-container {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px;
-        }
-        .profile-info {
-            margin-bottom: 20px;
-        }
-        .listing {
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
-        .listing img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-            float: left;
-        }
-        .clear {
-            clear: both;
-        }
-        .container {
-            align-items:center;
-            flex: 1; /* Makes both containers take up equal width */
-            display: grid;
-            padding: 20px; /* Padding inside the containers */
-            border-right: 1px solid #ddd; /* Separator between the containers */
-        }
-        .tab-container{
-            justify-content: end;
-        }
-    </style>
-
-      
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"/>
-    <link rel="stylesheet" href="styles/sell.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </head>
 
 <body style="background-color: #F8F5F0;">
+    <!-- Nav bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid py-3">
-                <a class="navbar-brand mx-3" href="index.html">
-                    <img src="images/logo.png" alt="Campus Thrift Logo" height="80">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" alt="Campus Thrift Logo" width="40" height="40"
+                        style="margin-right: 10px">
+                    CAMPUS THRIFT
                 </a>
-                <h1>CAMPUS THRIFT</h1>
-
-                <div class="collapse navbar-collapse justify-content-flex-end" id="navbarSupportedContent">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-center">
-                      <li class="nav-item mx-3">
-                          <a class="nav-link active" href="index.html"><i class="iconoir-home"></i></a>
-                      </li>
-                      <li class="nav-item mx-3">
-                          <a class="nav-link active" href="messages.html"><i class="iconoir-message-text"></i></a>
-                      </li>
-                      <li class="nav-item mx-3">
-                          <a class="nav-link active" aria-current="page" href="#"><i class="iconoir-star"></i></a>
-                      </li>
-                      <li class="nav-item mx-3">
-                          <a class="nav-link active" href="profile.html"><i class="iconoir-profile-circle"></i></a>
-                      </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="index.html"><i class="iconoir-home"></i></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" aria-current="page" href="messages.html"><i
+                                    class="iconoir-message-text"></i></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="saved.html"><i class="iconoir-star"></i></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" href="profile.html"><i class="iconoir-profile-circle"></i></a>
+                        </li>
                     </ul>
-
-                    <button type="button"><a href="sell.html">SELL NOW</a></button>
-                    <button type="button"><a href="signup.html">SIGN UP</a></button>
-                    <button type="button"><a href="login.html">LOGIN</a></button>
+                    <button class="primary mx-3" type="button"><a href="signup.html">SIGN UP</a></button>
+                    <button class="secondary mx-3" type="button"><a href="login.html">LOGIN</a></button>
                 </div>
             </div>
         </nav>
     </header>
-
-<div class="profile-container">
-
-    <div class = "container justify-content-flex-row">
-        <div class="profile-pic">
-            <img src="images/profilepic.jpg" alt ="profile pic" width=30px>
-        </div>
-        <div class="user-info">
-            <p><strong>@hannahypark</strong></p>
-            <p>3 items</p>
-        </div>
-    </div>
-</div>
-
-<div class="flex-column">
-    <div class="tab-container">
-        <ul class="nav nav-tabs justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Selling</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sold</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Saved</a>
-            </li>
-
-          </ul>
-    </div>
-
-    <div class="listings-container flex-row justify-content-flex-start">
-        <div class="listing">
-            <img src="images/greyshirt.jpg" alt="grey shirt image">
-            <p><strong>Grey Shirt, $50</strong></p>
-            <div class="clear"></div>
-        </div>
-
-        <div class="listing">
-            <img src="images/blueshirt.jpg" alt="blue shirt image">
-            <p><strong>Grey Shirt, $50</strong></p>
-            <div class="clear"></div>
-        </div>
-
-        <div class="listing">
-            <img src="images/redsshirt.jpg" alt="red shirt image">
-            <p><strong>Grey Shirt, $50</strong></p>
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
-
-<footer class="container d-flex justify-content-center primary-footer" id="footer">
-    <div class="logo-container">
-        <img src="images/logo.png" alt="Campus Thrift Logo" height="80">
-        <h1>CAMPUS THRIFT</h1>
-        <h2>A UVA thrifting platform made by students, for students!</h2>
-    </div>
-    
-    <nav class="container flex-column">
-        <ul class="navbar align-items-flex-start">
-            <li class="nav-item mx-3"><a class="nav-link active" href="index.html">HOME</a></li>
-            <li class="nav-item mx-3"><a class="nav-link active" href="messages.html">MESSAGES</a></li>
-            <li class="nav-item mx-3"><a class="nav-link active" href="saved.html">SAVED</a></li>
-            <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="#">PROFILE</a></li>
-            </li>
-
-        <ul class="navbar align-items-flex-start">
-            <li class="nav-item mx-3"><a class="nav-link disabled" href="#">ABOUT</a></li>
-            <li class="nav-item mx-3"><a class="nav-link disabled" href="#">CONTACT US</a></li>
-        </ul>
-    </nav>
-
     <div class="line"></div>
-    
-    <small class="copyright mx-3">
-        &copy; CIEL PARK AND & HANNAH PARK
-    </small> 
 
-    <small class="copyright mx-3">
-        TERMS & CONDITIONS
-    </small> 
+    <!-- Profile info -->
+    <section class="container my-4">
+        <div class="container d-flex flex-row align-items-center">
+            <div class="profile-pic-container">
+                <img src="images/profilepic.jpg" alt="profile pic" width=30px>
+            </div>
+            <div class="user-info">
+                <h3>@hannahypark</h3>
+                <p>3 items</p>
+            </div>
+        </div>
+    </section>
 
-</footer>
+    <!-- Profile listings -->
+    <section class="flex-column">
+        <div class="tab-container">
+            <ul class="nav nav-tabs justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Selling</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  aria-current="page" href="saved.html">Saved</a>
+                </li>
+
+            </ul>
+        </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-crossorigin="anonymous"></script>
+        <div class="listing-container d-flex flex-row">
+            <div class="listing">
+                <div class="listing-img-container">
+                    <img src="images/greyshirt.jpg" alt="grey shirt image">
+                </div>
+                <div class="line"></div>
+                <p>Grey Shirt, $50</p>
+            </div>
+            <div class="listing">
+                <div class="listing-img-container">
+                    <img src="images/blueshirt.jpg" alt="blue shirt image">
+                </div>
+                <div class="line"></div>
+                <p>Blue Shirt, $50</p>
+            </div>
+            <div class="listing">
+                <div class="listing-img-container">
+                    <img src="images/redshirt.jpg" alt="red shirt image">
+                </div>
+                <div class="line"></div>
+                <p>Red Shirt, $50</p>
+            </div>
+            <div class="listing">
+                <div class="listing-img-container">
+                    <img src="images/redshirt.jpg" alt="red shirt image">
+                </div>
+                <div class="line"></div>
+                <p>Red Shirt, $50</p>
+            </div>
+            <div class="listing">
+                <div class="listing-img-container">
+                    <img src="images/redshirt.jpg" alt="red shirt image">
+                </div>
+                <div class="line"></div>
+                <p>Red Shirt, $50</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="line"></div>
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light" id="footer">
+            <div class="container-fluid justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="images/logo.png" alt="Campus Thrift Logo" style="margin-right: 10px; width:60px;">
+                        CAMPUS THRIFT
+                    </a>
+                    <div class="collapse navbar-collapse">
+                        <p class="ms-2">A UVA thrifting platform made by students, for students!</p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="container d-flex flex-row justify-content-end">
+                        <ul class="navbar-nav flex-column mx-5">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">MESSAGES</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link active" href="saved.html">SAVED</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="rpfile.html">PROFILE</a></li>
+                        </ul>
+                        <ul class="navbar-nav flex-column mx-5">
+                            <li class="nav-item"><a class="nav-link disabled" href="#">SIGN IN</a></li>
+                            <li class="nav-item"><a class="nav-link disabled" href="#">ABOUT</a></li>
+                            <li class="nav-item"><a class="nav-link disabled" href="#">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 

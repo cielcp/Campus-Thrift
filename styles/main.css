@@ -1,28 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
-
-/* Author: Ciel */
+/* author: ciel */
 
 /* Correctly and properly define at least ten of your own CSS rules */
 
+/* ------------ TEXT---------- */
+
 .navbar-brand {
     font-size: x-large;
-    font-family:"Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 h1 {
     font-size: x-large;
-    font-family:"Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 h2 {
-    font-size: larger;
-    font-family:"Raleway", sans-serif;
+    font-size: x-large;
+    font-family: "Raleway", "Inter-Regular", sans-serif;
 }
 
 h3 {
     font-size: large;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter-Regular", sans-serif;
 }
 
 p {
@@ -32,10 +31,10 @@ p {
 
 a {
     text-decoration: none;
-    color:#040402;
+    color: #040402;
 }
 
-/* COMPONENTS */
+/* ------------ GEN COMPONENTS ---------- */
 
 button {
     font-family: "Raleway", sans-serif;
@@ -45,17 +44,18 @@ button {
     padding-left: 20px;
     padding-right: 20px;
     background-color: #F8F5F0;
-} 
-button a {
-    color: #040402; /* Default color */
+    color: #040402;
 }
+
 
 /* At least 3 of your ten CSS rules properly update the style or layout of your screens 
 when specific events occur. */
 button:hover {
     background-color: #040402;
+    transition:.3s;
 }
-button:hover a {
+
+a button:hover {
     color: #F8F5F0;
 }
 
@@ -63,59 +63,95 @@ button:hover a {
     height: 1px;
     background-color: #040402;
 }
+
 .vert-line {
     width: 1px;
     background-color: #040402;
 }
 
+/* ------------ HOME ---------- */
+
+/* nav link icons */
+.navbar-nav .nav-link img {
+    width: 30px;
+    height: 30px;
+}
+
 .search-bar {
     border-radius: 50px;
-    border-color:#040402;
+    border-color: #040402;
     border-width: 1.5px;
 }
 
-.icon-container {
-    margin-left: 10px;
+.category-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .category-container {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    overflow-x: hidden;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .listing {
-    flex: 0 0 auto;
     border-style: solid;
     border-width: 1.5px;
-    width: 300px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-} 
+    width: calc(20% - 20px);
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/* not working why? */
+.category-container:first-child {
+    margin-left:0;
+}
 
 .listing-img-container {
     width: 100%;
-    height: 300px;
+    height: 75%;
     overflow: hidden;
-} img {
-    width: 100%;
-    
 }
 
-/* MESSAGES */
+.listing-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listing-text-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 25%;
+}
+
+.view-all-listings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* ------------ MESSAGES ---------- */
+
 .chat-log {
     width: 30%;
 }
+
 .chat-profile {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 40px;
 }
+
 .chat-container {
-    width:80%;
+    width: 80%;
     padding: 40px;
 }
 
@@ -139,7 +175,7 @@ button:hover a {
 }
 
 .listing-container {
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 40px;
@@ -150,6 +186,7 @@ button:hover a {
     border-bottom: #040402;
     border-style: solid;
 }
+
 .item:last-child {
     margin-right: 0;
 }
@@ -162,7 +199,8 @@ should utilize the responsive design mode of the browser to showcase */
         flex: 1 0 auto;
         max-width: 200px;
     }
+
     .listing-img-container {
-        height:200px;
+        height: 200px;
     }
 }
